@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据上报软件</title>
+    <link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+
+    <link rel="stylesheet" type="text/css" href="console/css/desktop.css"/>
+    <link rel="stylesheet" type="text/css" href="console/css/myself.css"/>
+
+    <script type="text/javascript" src="extjs/bootstrap.js"></script>
+    <script type="text/javascript" src="extjs/init.js"></script>
+    <script type="text/javascript" src="console/js/DateTimeField.js"></script>
+
+    <script type="text/javascript">
+        Ext.Loader.setPath({
+            'Ext.ux.desktop': 'console/js',
+            console: 'console'
+        });
+
+        Ext.require('console.App');
+        Ext.require('console.Settings');
+        Ext.require('console.SystemStatus');
+        Ext.require('console.WallpaperModel');
+
+        var myConsole;
+        Ext.onReady(function () {
+            myConsole = new console.App();
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
